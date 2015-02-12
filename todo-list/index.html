@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Create To Do List with Backbone</title>
+	</head>
+	<body>
+		<h1> To-Do List</h1>
+			<section id-"todo-app">
+
+				<header id="header">
+					<input type="text" id="text-input" placeholder="What needs to be done?">
+					<button type="button" id="my-button">Enter</button>
+				</header>
+
+				<section id="main">
+					<ul id="todo-list">
+
+					</ul>
+				</section>
+			</section>
+
+			<script type="text/html" id="list-view">
+
+				<div><%= message %><input type="checkbox" id="check-box"></div>
+			</script>
+
+
+
+	<!-- Must run 'bower init' in the Terminal to create the dependencies and JSON -->
+
+	<!-- These are my library files -->
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+
+
+	<script type="text/javascript" src="scripts/models/messageModel.js"></script>
+
+	<script type="text/javascript" src="scripts/collection/messagesCollection.js"></script>
+
+	<!-- These are my view files -->
+
+	<script type="text/javascript" src="scripts/views/ListView.js"></script>
+
+	<script type="text/javascript" src="scripts/views/PostFormView.js"></script>
+
+	<script type="text/javascript" src="scripts/views/AppView.js"></script>
+
+<!-- This is my main file -->
+
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</body>
+</html>
