@@ -9,14 +9,16 @@ var listView = Backbone.View.extend({
 		'onStrikeThrough'
 		);
 
-		this.$checkbox = $('#check-box');
 		var Template = _.template($('#list-view').html());
-		this.$el.append(Template(this.model.attributes))
+		this.$el.append(Template(this.model.attributes));
+		
+		this.$checkbox = $(this.$el.find('.check-box'));
+		this.$checkbox.on('click', this.onStrikeThrough);
 		
 	},
 
 	onStrikeThrough: function(){
-		$(this.$el).css("text-decoration", "line-through");
+		$this.$el.css("text-decoration", "line-through");
 	},
 
 	// onModelChanged: function() {
