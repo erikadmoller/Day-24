@@ -17,14 +17,9 @@ var listView = Backbone.View.extend({
 		
 	},
 
-	onStrikeThrough: function(){
-		$this.$el.css("text-decoration", "line-through");
+	onStrikeThrough: function() {
+		this.$el.toggleClass('strike-text');
 	},
-
-	// onModelChanged: function() {
-	// 	this.$el.toggleClass('strike-text');
-	// }
-
 
 });
 
