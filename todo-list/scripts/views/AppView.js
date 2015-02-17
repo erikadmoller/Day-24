@@ -18,6 +18,8 @@ var AppView = Backbone.View.extend({
 		$button.on('click', this.onButtonClick);
 		this.messagesCollection.on('add', this.onAddToCollection);
 
+		this.messagesCollection.fetch();
+
 	},
 
 	render: function() {
@@ -35,6 +37,8 @@ var AppView = Backbone.View.extend({
 
 
 		});
+
+		this.listItem.save();
 
 		this.messagesCollection.add(this.listItem);
 		this.$textInput.val('');
